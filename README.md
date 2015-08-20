@@ -8,6 +8,9 @@ Formula-style NSDate calculation framework for Swift.
 ## Code Examples
 
 ```swift
+import Foundation
+import FormulaStyleDate
+
 let now = NSDate()
 let before = now.dateByAddingTimeInterval(-60.0)
 let after = now.dateByAddingTimeInterval(60.0)
