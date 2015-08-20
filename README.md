@@ -2,6 +2,7 @@
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/fhisa/FormulaStyleDate/master/LICENSE)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![GitHub version](https://badge.fury.io/gh/fhisa%2FFormulaStyleDate.svg)](http://badge.fury.io/gh/fhisa%2FFormulaStyleDate)
 
 Formula-style NSDate calculation framework for Swift.
 
