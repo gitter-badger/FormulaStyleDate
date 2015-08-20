@@ -8,16 +8,20 @@
 
 import Foundation
 
-public func + (date: NSDate, interval: NSTimeInterval) -> NSDate {
-    return date.dateByAddingTimeInterval(interval)
+public func + (lhs: NSDate, rhs: NSTimeInterval) -> NSDate {
+    return lhs.dateByAddingTimeInterval(rhs)
 }
 
-public func + (interval: NSTimeInterval, date: NSDate) -> NSDate {
-    return date.dateByAddingTimeInterval(interval)
+public func + (lhs: NSTimeInterval, rhs: NSDate) -> NSDate {
+    return rhs.dateByAddingTimeInterval(lhs)
 }
 
-public func - (date: NSDate, interval: NSTimeInterval) -> NSDate {
-    return date.dateByAddingTimeInterval(-interval)
+public func - (lhs: NSDate, rhs: NSTimeInterval) -> NSDate {
+    return lhs.dateByAddingTimeInterval(-rhs)
+}
+
+public func - (lhs: NSDate, rhs: NSDate) -> NSTimeInterval {
+    return lhs.timeIntervalSinceDate(rhs)
 }
 
 public func < (lhs: NSDate, rhs: NSDate) -> Bool {

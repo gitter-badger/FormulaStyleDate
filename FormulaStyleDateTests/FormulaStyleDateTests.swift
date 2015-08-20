@@ -45,6 +45,26 @@ class FormulaStyleDateTests: XCTestCase {
         XCTAssertEqual(now - (-interval), after)
     }
 
+    func test_date_minus_date() {
+        XCTAssertEqual(after - now, NSTimeInterval(interval))
+        XCTAssertEqual(now - before, NSTimeInterval(interval))
+        XCTAssertEqual(before - now, NSTimeInterval(-interval))
+        XCTAssertEqual(now - after, NSTimeInterval(-interval))
+        XCTAssertEqual(now - now, NSTimeInterval(0))
+    }
+
+    func test_date_equal_date() {
+        XCTAssertTrue(now == now)
+        XCTAssertFalse(now == after)
+        XCTAssertFalse(now == before)
+    }
+
+    func test_date_not_equal_date() {
+        XCTAssertFalse(now != now)
+        XCTAssertTrue(now != after)
+        XCTAssertTrue(now != before)
+    }
+
     func test_date_less_than_date() {
         XCTAssertTrue(before < now)
         XCTAssertTrue(now < after)
